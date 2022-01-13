@@ -1,46 +1,99 @@
-# Getting Started with Create React App
+# Typescript Course
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```js
+// TS => Writing Js with extra doc
+// No effect on code execution
 
-## Available Scripts
+// Catch errros during development
+// Only active during development
+// Type annotations
+// No performance optimization
 
-In the project directory, you can run:
+// Ts code > Ts compiler > Old Js
+```
 
-### `npm start`
+<details>
+<summary>Main Commands</summary>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```js
+// tsc --help
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+// 1- tsc index.ts => compile index.ts code to a new index.js file
+// 2- node index.js => run index.js code
 
-### `npm test`
+// ts-node => compile ts code and run = (step 1 & 2)
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</details>
 
-### `npm run build`
+## I - Basics - Syntax + Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+<summary>Syntax + Features</summary>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
+// Syntax + Features :
+// => what is an interface ?
+// => syntax for defining interface
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+<summary>Types</summary>
 
-### `npm run eject`
+```js
+// Types in Ts
+// Primitives types : string, number, boolean, null, undefined, void, symbol
+// Object types : functions, classes, arrays, objects
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+// Used by Ts compilers to analize our code for errors
+// Help others engineers to understand our code
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+// Type of a value => shortcut, easy way to refers to the differents methods and properties that value has
+//
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+</details>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<details>
+<summary>Type Annotations + Type inference</summary>
 
-## Learn More
+```js
+// When to use annotations
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+// 1) Function that returns 'any' type
+// => JSON.parse(something) => any
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+// 2) Variable non initialized
+// let isSomeoneHere; // any
+// let isSomeoneHere: boolean; // ok
+// let isSomeoneHere = false // better
+// if(foundPerson) {
+//     isSomeoneHere = true;
+// }
+
+// 3)Variable whote type cannot be inferred correctly
+// let numbers = [-10, -1, -2]
+// let numberAboveZero: boolean | numbers= false;
+// const num = numbers.find((num) => num >= 0);
+// if (num) {
+//     numberAboveZero = num;
+// }
+```
+
+</details>
+
+</details>
+
+## II - Design Patterns
+
+<details>
+<summary>Design patterns with TS</summary>
+
+```js
+// Design patterns with Ts:
+// => how to use interface to write reusable code
+```
+
+</details>
